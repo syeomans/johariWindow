@@ -1,4 +1,3 @@
-# import sys
 from os import system, name
 from random import randint
 
@@ -47,7 +46,7 @@ for i in range(0, numPlayers):
         responses[i].append([])
 
 # Ask each player for responses
-for j in range(0, numPlayers):
+for j in range(0, numPlayers): # swapping j and i to iterate in a "round robin"
     for i in range(0,numPlayers):
         # Print whose turn it is
         print("Player " + str(i+1) + "'s turn")
@@ -74,7 +73,6 @@ for i in range(0, numPlayers):
     for j in range(0, numPlayers):
         if i != j:
             col2 += responses[i][j]
-    # col2 = list(set(col2)) # remove duplicates
     processedData.append([col1, col2])
 
 # Create a Johari window for each player
